@@ -1,19 +1,20 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import { BrowserRouter as Router, Route ,Routes} from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0)
+import UserRoute from "./Routes/userRoute";
+import AdminRoute from "./Routes/adminRoute";
 
+const App = () => {
   return (
-  
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-  )
-}
+    <main>
+      <Router>
+        <Routes>
+        <Route path="/*" element={<UserRoute />} />
+        <Route path="/admin/*" element={<AdminRoute />} />
+        </Routes>
+      </Router>
+    </main>
+  );
+};
 
-export default App
+export default App;
