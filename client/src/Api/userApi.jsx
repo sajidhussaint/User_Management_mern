@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const userApi = axios.create({
-    baseURL: `https://user-management-mern-gamma.vercel.app/`,
+    baseURL: `http://localhost:3000`,
   });
 
 
