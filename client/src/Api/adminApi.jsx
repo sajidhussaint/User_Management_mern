@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const adminApi = axios.create({
-  baseURL: `https://user-management-mern-gamma.vercel.app/admin`,
+  baseURL: `http://localhost:3000/admin`,
 });
 
 // ******** ADMIN SIGN IN DATA PASSING AREA **********//
